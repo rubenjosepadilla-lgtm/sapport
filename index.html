@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <title>Sapport | Proyectos SAP & SAP Workforce Services</title>
+  <meta name="description" content="Firma chilena especializada en proyectos SAP con base en HR y SAP Workforce Services. Más de 16 años entregando proyectos de valor. Santiago, Chile." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* ── Sapport Brand ── */
+      --navy:        #0F2D4A;   /* primary brand navy */
+      --dark-bg:     #0B1726;   /* darkest bg */
+      --orange:      #E46A25;   /* accent — notch on S */
+      --orange-light:#FDF0E8;   /* orange tint for cards */
+      --white:       #FFFFFF;
+
+      /* ── UI ── */
+      --light-bg:    #F5F7F9;
+      --mid-bg:      #EDF0F3;
+      --text:        #0F2D4A;
+      --text-muted:  #5A6B7B;
+      --border:      #D9E0E7;
+      --radius:      8px;
+
+      --font-head: 'Poppins', Montserrat, Arial, sans-serif;
+      --font-body: 'Open Sans', Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ━━━ NAV ━━━ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--dark-bg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 64px;
+    }
+
+    /* Logo SVG inline */
+    .logo-wrap { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+    .logo-svg { height: 28px; width: auto; }
+
+    .logo-tagline {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.05em;
+      border-left: 1px solid rgba(255,255,255,0.15);
+      padding-left: 1rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: var(--font-head);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--orange) !important;
+      color: var(--white) !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: var(--radius);
+      font-weight: 600 !important;
+      transition: opacity 0.2s !important;
+    }
+
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ━━━ HERO ━━━ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background-color: var(--dark-bg);
+      background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(11,23,38,0.92) 0%, rgba(15,45,74,0.80) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 840px;
+      padding: 0 5%;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(228,106,37,0.4);
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 580px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-orange {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius);
+      background: var(--orange);
+      color: var(--white);
+      border: 2px solid var(--orange);
+      transition: opacity 0.2s;
+    }
+
+    .btn-orange:hover { opacity: 0.88; }
+
+    .btn-outline-white {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius);
+      background: transparent;
+      color: rgba(255,255,255,0.9);
+      border: 2px solid rgba(255,255,255,0.35);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-outline-white:hover {
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    /* ━━━ SHARED ━━━ */
+    section { padding: 90px 5%; }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .section-lead {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      line-height: 1.75;
+    }
+
+    .divider {
+      width: 40px;
+      height: 4px;
+      background: var(--orange);
+      border-radius: 2px;
+      margin: 0.75rem 0 1.5rem;
+    }
+
+    .divider-center { margin: 0.75rem auto 1.5rem; }
+
+    .pillar-header {
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto 3rem;
+    }
+
+    /* ━━━ ABOUT STRIP ━━━ */
+    .about {
+      background: var(--navy);
+      padding: 70px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      flex-wrap: wrap;
+    }
+
+    .about .section-title { color: var(--white); }
+    .about .section-lead  { color: rgba(255,255,255,0.60); }
+    .about .divider        { background: var(--orange); }
+
+    .about-stats { display: flex; gap: 3rem; flex-wrap: wrap; }
+
+    .stat-num {
+      font-family: var(--font-head);
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .stat-num span { color: var(--orange); }
+
+    .stat-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.50);
+      margin-top: 0.3rem;
+    }
+
+    /* ━━━ PILAR 1: PROYECTOS SAP ━━━ */
+    .sap-projects { background: var(--white); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      gap: 1.25rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 8px 28px rgba(15,45,74,0.10);
+      transform: translateY(-3px);
+    }
+
+    .service-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--orange-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .service-icon svg {
+      width: 21px; height: 21px;
+      fill: none;
+      stroke: var(--orange);
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-head);
+      font-size: 0.975rem;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+      color: var(--navy);
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .hr-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: var(--font-head);
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: #FDF0E8;
+      color: var(--orange);
+      border: 1px solid rgba(228,106,37,0.25);
+      border-radius: 100px;
+      padding: 0.2rem 0.65rem;
+      margin-top: 0.9rem;
+    }
+
+    /* ━━━ PILAR 2: STAFFING ━━━ */
+    .staffing { background: var(--mid-bg); }
+
+    .workforce-statement {
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .workforce-statement-left h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .workforce-statement-left p {
+      font-size: 0.975rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .workforce-capabilities {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .wcap-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius);
+      transition: background 0.2s;
+    }
+
+    .wcap-item:hover { background: rgba(15,45,74,0.05); }
+
+    .wcap-num {
+      font-family: var(--font-head);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--orange);
+      width: 24px;
+      flex-shrink: 0;
+    }
+
+    .wcap-body h4 {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+    }
+
+    .wcap-body p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .wcap-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0 1.25rem;
+    }
+
+    .workforce-closing {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 2.5rem 3rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .wc-quote {
+      flex: 1;
+      min-width: 260px;
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.5;
+    }
+
+    .wc-quote span { color: var(--orange); }
+
+    .wc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      flex: 0 0 auto;
+    }
+
+    .tag {
+      font-family: var(--font-head);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.28rem 0.75rem;
+      border-radius: 100px;
+      border: 1px solid rgba(228,106,37,0.45);
+      color: var(--orange);
+      background: rgba(228,106,37,0.08);
+    }
+
+    @media (max-width: 768px) {
+      .workforce-statement { grid-template-columns: 1fr; gap: 2rem; }
+      .workforce-closing { padding: 1.75rem; }
+    }
+
+    /* ━━━ NOSOTROS ━━━ */
+    .nosotros { background: var(--white); }
+
+    .nosotros-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      gap: 4rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .nosotros-text { flex: 1; min-width: 260px; }
+
+    .nosotros-cards {
+      flex: 0 0 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nos-card {
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+    }
+
+    .nos-card-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+    }
+
+    .nos-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ━━━ CTA ━━━ */
+    .cta-section {
+      background: var(--dark-bg);
+      text-align: center;
+      padding: 90px 5%;
+    }
+
+    .cta-section .section-title { color: var(--white); }
+    .cta-section .section-lead  { color: rgba(255,255,255,0.55); margin: 0 auto 2.5rem; }
+
+    /* ━━━ FOOTER ━━━ */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.40);
+      text-align: center;
+      padding: 2rem 5%;
+      font-size: 0.8rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.40); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.70); }
+
+    /* ━━━ RESPONSIVE ━━━ */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      section { padding: 60px 5%; }
+      .about { flex-direction: column; text-align: center; }
+      .about-stats { justify-content: center; }
+      .workforce-intro { padding: 1.75rem; }
+      .diferencial { padding: 2rem 1.5rem; }
+      .nosotros-inner { flex-direction: column; }
+      .nosotros-cards { flex: none; width: 100%; }
+    }
+  </style>
+<link rel="canonical" href="https://sapport.cl/"/>
+<meta name="robots" content="index, follow"/>
+<meta name="keywords" content="consultoría SAP Chile, SAP HCM, SuccessFactors, Employee Central, SAP S/4HANA, SAP Workforce Services, staffing SAP, proyectos SAP HR"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://sapport.cl/"/>
+<meta property="og:title" content="Sapport | Proyectos SAP & SAP Workforce Services"/>
+<meta property="og:description" content="Firma chilena especializada en proyectos SAP con base en HR y SAP Workforce Services. Más de 16 años entregando proyectos de valor. Santiago, Chile."/>
+<meta property="og:image" content="https://sapport.cl/media/sapport-logo-a-white-400.webp"/>
+<meta property="og:locale" content="es_CL"/>
+<meta property="og:site_name" content="Sapport"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Sapport | Proyectos SAP & SAP Workforce Services"/>
+<meta name="twitter:description" content="Proyectos SAP con base en HR y equipos especializados para la gran empresa. Desde 2010 en Chile."/>
+<meta name="twitter:image" content="https://sapport.cl/media/sapport-logo-a-white-400.webp"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://sapport.cl/#org",
+      "name": "Sapport Consulting",
+      "url": "https://sapport.cl/",
+      "logo": "https://sapport.cl/media/sapport-logo-a-white-400.webp",
+      "description": "Firma chilena especializada en proyectos SAP con base en Recursos Humanos y en SAP Workforce Services para la gran empresa. Más de 16 años de experiencia y más de 100 proyectos entregados.",
+      "foundingDate": "2010",
+      "areaServed": "CL",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "San Sebastián 2957, Las Condes", "addressLocality": "Santiago", "addressRegion": "Región Metropolitana",
+        "addressCountry": "CL"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/sapport-consulting-spa"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sapport.cl/#website",
+      "url": "https://sapport.cl/",
+      "name": "Sapport",
+      "publisher": {
+        "@id": "https://sapport.cl/#org"
+      },
+      "inLanguage": "es-CL"
+    },
+    {
+      "@type": "Service",
+      "name": "Proyectos SAP",
+      "provider": {
+        "@id": "https://sapport.cl/#org"
+      },
+      "areaServed": "CL",
+      "description": "Consultoría end-to-end en proyectos SAP: SAP HCM, SuccessFactors, Employee Central, nómina y S/4HANA, con base en Recursos Humanos."
+    },
+    {
+      "@type": "Service",
+      "name": "SAP Workforce Services",
+      "provider": {
+        "@id": "https://sapport.cl/#org"
+      },
+      "areaServed": "CL",
+      "description": "Equipos y consultores SAP especializados para ejecutar iniciativas estratégicas de Personas y Tecnología en la gran empresa."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué hace Sapport?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sapport Consulting es una firma chilena, activa desde 2010, especializada en proyectos SAP con base en Recursos Humanos y en SAP Workforce Services (equipos de consultores especializados) para la gran empresa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se especializa Sapport dentro de SAP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En SAP centrado en Personas: SAP HCM, SuccessFactors, Employee Central y nómina, además de proyectos de SAP S/4HANA y gestión de proyectos (PMO)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué son los SAP Workforce Services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es la provisión de consultores y equipos SAP especializados que se integran a tu organización para ejecutar iniciativas estratégicas de Personas y Tecnología."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánta experiencia tiene Sapport?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Más de 16 años de trayectoria y más de 100 proyectos entregados, acompañando a las principales organizaciones del país, siempre con Recursos Humanos como eje central."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo contactar a Sapport?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes escribir a contacto@sapport.cl o agendar una reunión desde el sitio para evaluar tu proyecto SAP o tu necesidad de capacidad de ejecución."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ════ NAV ════ -->
+<nav>
+  <a href="#inicio" class="logo-wrap">
+    <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 600">
+      <g font-family="Poppins,Montserrat,Arial,sans-serif" font-weight="800" font-size="360" fill="#FFFFFF">
+        <text x="120" y="420" letter-spacing="2">Sapport</text>
+      </g>
+      <rect x="228" y="160" width="180" height="44" rx="6" fill="#E46A25" opacity="0.95"/>
+    </svg>
+    <span class="logo-tagline">Personas&nbsp;|&nbsp;Procesos&nbsp;|&nbsp;Tecnología</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="proyectos-sap.html">Proyectos SAP</a></li>
+    <li><a href="sap-workforce-services.html">SAP Workforce</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Personas · Procesos · Tecnología</span>
+    <h1>Expertos en <em>Personas,</em><br>SAP e Inteligencia Artificial</h1>
+    <p>Proyectos SAP con base en HR y equipos especializados para ejecutar iniciativas estratégicas de Personas y Tecnología.</p>
+    <div class="hero-actions">
+      <a href="proyectos-sap.html" class="btn-orange">Proyectos SAP</a>
+      <a href="sap-workforce-services.html" class="btn-outline-white">SAP Workforce Services</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Respuesta rápida (GEO/AEO) -->
+<section aria-label="Resumen" style="background:#F1F5F9;border-left:5px solid #E46A25;padding:22px 5%;">
+  <p style="margin:0 auto;max-width:900px;font-size:1.03rem;line-height:1.62;color:#0F172A;font-family:inherit;"><strong>En breve:</strong> Sapport Consulting es una firma chilena fundada en 2010, especializada en proyectos SAP con base en Recursos Humanos (SAP HCM, SuccessFactors, Employee Central y S/4HANA) y en SAP Workforce Services: equipos de consultores especializados para ejecutar iniciativas de Personas y Tecnología. Con más de 16 años y más de 100 proyectos entregados, acompaña a grandes organizaciones en Chile, de principio a fin.</p>
+</section>
+<!-- ════ ABOUT STRIP ════ -->
+<div class="about">
+  <div style="max-width:520px;">
+    <span class="section-label">Quiénes somos</span>
+    <div class="divider"></div>
+    <h2 class="section-title">Sapport Consulting</h2>
+    <p class="section-lead">Firma chilena fundada en 2010 por un grupo de consultores SAP. Con más de 16 años acompañando a las principales organizaciones del país, siempre con Recursos Humanos como eje central.</p>
+  </div>
+  <div class="about-stats">
+    <div class="stat">
+      <div class="stat-num">16<span>+</span></div>
+      <div class="stat-label">Años de experiencia</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100<span>+</span></div>
+      <div class="stat-label">Proyectos entregados</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">2</div>
+      <div class="stat-label">Pilares de servicio</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ PILAR 1: PROYECTOS SAP ════ -->
+<section id="proyectos-sap" class="sap-projects">
+  <div class="pillar-header">
+    <span class="section-label">Pilar 1</span>
+    <div class="divider divider-center"></div>
+    <h2 class="section-title">Proyectos SAP</h2>
+    <p class="section-lead">Consultoría end-to-end en proyectos SAP para la gran empresa. Con raíces profundas en HR, expandimos nuestra cobertura para acompañar toda la transformación tecnológica de tu organización.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </div>
+      <h3>SAP HCM & SuccessFactors</h3>
+      <p>Implementación, configuración y evolución de SAP HCM y SuccessFactors. Base histórica de Sapport y nuestra mayor área de expertise.</p>
+      <span class="hr-badge">★ Base HR</span>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+      </div>
+      <h3>Employee Central & Nómina</h3>
+      <p>Migración, configuración y optimización de Employee Central. Integración de nómina local con plataformas globales SuccessFactors.</p>
+      <span class="hr-badge">★ Base HR</span>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3>SAP S/4HANA</h3>
+      <p>Acompañamiento en proyectos de migración y adopción de SAP S/4HANA: análisis de impacto, diseño de solución e implementación.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <h3>Gestión de Proyectos SAP</h3>
+      <p>PMO y liderazgo de proyectos SAP bajo metodología ágil o tradicional. Diseño, planificación, gestión del cambio y adopción.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      </div>
+      <h3>Soporte & AMS</h3>
+      <p>Servicios de soporte continuo, mantenimiento evolutivo y Application Management Services para entornos SAP en producción.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+      </div>
+      <h3>Integraciones & SAP BTP</h3>
+      <p>Diseño e implementación de integraciones SAP con sistemas legados, plataformas HR Tech y herramientas de Analytics usando SAP BTP.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════ PILAR 2: SAP WORKFORCE SERVICES ════ -->
+<section id="staffing" class="staffing">
+  <div class="pillar-header">
+    <span class="section-label">Pilar 2</span>
+    <div class="divider divider-center"></div>
+    <h2 class="section-title">SAP Workforce Services</h2>
+    <p class="section-lead">Especialistas en SAP HR, SuccessFactors y HR Tech disponibles cuando y como los necesitas.</p>
+  </div>
+
+  <div class="workforce-statement">
+    <div class="workforce-statement-left">
+      <h3>No entregamos recursos.<br>Entregamos ejecución.</h3>
+      <p>Armamos equipos especializados en Personas, SAP e Inteligencia Artificial que se integran a tu organización y trabajan con tus métricas, tus plazos y tus objetivos. Llevamos el conocimiento de RRHH, tú mantienes el control.</p>
+    </div>
+    <div class="workforce-capabilities">
+      <div class="wcap-item">
+        <div class="wcap-num">01</div>
+        <div class="wcap-body">
+          <h4>Talent Augmentation</h4>
+          <p>Especialistas SAP HCM, SuccessFactors, HR Tech e IA integrados a tu equipo.</p>
+        </div>
+      </div>
+      <div class="wcap-divider"></div>
+      <div class="wcap-item">
+        <div class="wcap-num">02</div>
+        <div class="wcap-body">
+          <h4>Managed Squads</h4>
+          <p>Equipos multidisciplinarios con objetivos, métricas y entregables definidos.</p>
+        </div>
+      </div>
+      <div class="wcap-divider"></div>
+      <div class="wcap-item">
+        <div class="wcap-num">03</div>
+        <div class="wcap-body">
+          <h4>HR AI Factory</h4>
+          <p>Equipos especializados en IA aplicada a Recursos Humanos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="workforce-closing">
+    <p class="wc-quote">Talento especializado.<br>Equipos comprometidos.<br><span>Resultados que impulsan a su organización.</span></p>
+    <div class="wc-tags">
+      <span class="tag">SAP HCM</span>
+      <span class="tag">SuccessFactors</span>
+      <span class="tag">HR Tech</span>
+      <span class="tag">IA aplicada a RRHH</span>
+      <span class="tag">People Analytics</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════ NOSOTROS ════ -->
+<section id="nosotros" class="nosotros">
+  <div class="nosotros-inner">
+    <div class="nosotros-text">
+      <span class="section-label">Nosotros</span>
+      <div class="divider"></div>
+      <h2 class="section-title">Sobre Sapport</h2>
+      <p class="section-lead" style="margin-bottom:1rem;">
+        Sapport Consulting es una firma chilena fundada por consultores SAP en 2010. Con más de 16 años de experiencia trabajando con las principales organizaciones del país, somos referentes en proyectos SAP con foco en Recursos Humanos.
+      </p>
+      <p class="section-lead">
+        Combinamos visión estratégica, metodología probada y talento especializado para entregar proyectos que realmente crean valor. Hoy evolucionamos hacia un modelo que une consultoría, staffing gestionado e inteligencia artificial aplicada a Personas.
+      </p>
+    </div>
+    <div class="nosotros-cards">
+      <div class="nos-card">
+        <div class="nos-card-title">Especialización HR</div>
+        <p>Nuestro origen y diferenciador: dominio profundo de procesos de Personas y soluciones SAP HR.</p>
+      </div>
+      <div class="nos-card">
+        <div class="nos-card-title">Modelo gestionado</div>
+        <p>No solo entregamos talento: gestionamos equipos, definimos métricas y aseguramos resultados.</p>
+      </div>
+      <div class="nos-card">
+        <div class="nos-card-title">IA Aplicada a RRHH</div>
+        <p>Integramos soluciones de IA específicas para RRHH, con equipos que entienden tanto la tecnología como los procesos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CTA ════ -->
+<section id="contacto" class="cta-section">
+  <h2 class="section-title">¿Tienes un proyecto o necesitas<br>capacidad de ejecución?</h2>
+  <p class="section-lead">Conversemos. Diseñamos la solución que mejor se adapte a tu organización, sea un proyecto SAP o un equipo gestionado.</p>
+  <a href="mailto:contacto@sapport.cl" class="btn-orange">Agenda una reunión</a>
+</section>
+
+
+<!-- FAQ visible (alineada con FAQPage JSON-LD) -->
+<section id="preguntas" aria-label="Preguntas frecuentes" style="padding:64px 5%;background:#fff;">
+  <div style="max-width:820px;margin:0 auto;">
+    <h2 style="font-family:inherit;font-size:1.85rem;color:#0F172A;margin:0 0 8px;">Preguntas frecuentes</h2>
+    <div style="height:3px;width:48px;background:#E46A25;margin-bottom:28px;"></div>
+    <div style="border-bottom:1px solid #E5E7EB;padding:18px 0;">
+      <h3 style="font-size:1.08rem;color:#0F172A;margin:0 0 6px;font-family:inherit;">¿Qué hace Sapport?</h3>
+      <p style="color:#475569;line-height:1.6;margin:0;font-family:inherit;">Sapport Consulting es una firma chilena, activa desde 2010, especializada en proyectos SAP con base en Recursos Humanos y en SAP Workforce Services (equipos de consultores especializados) para la gran empresa.</p>
+    </div>
+    <div style="border-bottom:1px solid #E5E7EB;padding:18px 0;">
+      <h3 style="font-size:1.08rem;color:#0F172A;margin:0 0 6px;font-family:inherit;">¿En qué se especializa Sapport dentro de SAP?</h3>
+      <p style="color:#475569;line-height:1.6;margin:0;font-family:inherit;">En SAP centrado en Personas: SAP HCM, SuccessFactors, Employee Central y nómina, además de proyectos de SAP S/4HANA y gestión de proyectos (PMO).</p>
+    </div>
+    <div style="border-bottom:1px solid #E5E7EB;padding:18px 0;">
+      <h3 style="font-size:1.08rem;color:#0F172A;margin:0 0 6px;font-family:inherit;">¿Qué son los SAP Workforce Services?</h3>
+      <p style="color:#475569;line-height:1.6;margin:0;font-family:inherit;">Es la provisión de consultores y equipos SAP especializados que se integran a tu organización para ejecutar iniciativas estratégicas de Personas y Tecnología.</p>
+    </div>
+    <div style="border-bottom:1px solid #E5E7EB;padding:18px 0;">
+      <h3 style="font-size:1.08rem;color:#0F172A;margin:0 0 6px;font-family:inherit;">¿Cuánta experiencia tiene Sapport?</h3>
+      <p style="color:#475569;line-height:1.6;margin:0;font-family:inherit;">Más de 16 años de trayectoria y más de 100 proyectos entregados, acompañando a las principales organizaciones del país, siempre con Recursos Humanos como eje central.</p>
+    </div>
+    <div style="border-bottom:1px solid #E5E7EB;padding:18px 0;">
+      <h3 style="font-size:1.08rem;color:#0F172A;margin:0 0 6px;font-family:inherit;">¿Cómo puedo contactar a Sapport?</h3>
+      <p style="color:#475569;line-height:1.6;margin:0;font-family:inherit;">Puedes escribir a contacto@sapport.cl o agendar una reunión desde el sitio para evaluar tu proyecto SAP o tu necesidad de capacidad de ejecución.</p>
+    </div>
+  </div>
+</section>
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div style="margin-bottom:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 600" style="height:20px;width:auto;opacity:0.7;"><g font-family="Poppins,Montserrat,Arial,sans-serif" font-weight="800" font-size="360" fill="#FFFFFF"><text x="120" y="420" letter-spacing="2">Sapport</text></g><rect x="228" y="160" width="180" height="44" rx="6" fill="#E46A25" opacity="0.95"/></svg></div>
+  <p style="margin-bottom:0.3rem;letter-spacing:0.08em;font-size:0.72rem;opacity:0.5;">Personas&nbsp;|&nbsp;Procesos&nbsp;|&nbsp;Tecnología</p>
+  <div style="display:flex;gap:12px;justify-content:center;margin:16px 0 6px;"><a href="https://www.linkedin.com/company/sapport-consulting-spa" target="_blank" rel="noopener" title="LinkedIn" style="display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.25);border-radius:8px;"><svg viewBox="0 0 24 24" width="17" height="17" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="#" title="Instagram" style="display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.25);border-radius:8px;"><svg viewBox="0 0 24 24" width="17" height="17" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a><a href="#" title="YouTube" style="display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.25);border-radius:8px;"><svg viewBox="0 0 24 24" width="17" height="17" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
+  <p style="font-size:0.8rem;opacity:0.75;margin:6px 0 2px;">San Sebastián 2957, Las Condes, Santiago de Chile</p>
+  <p style="font-size:0.8rem;margin:0 0 8px;"><a href="mailto:contacto@sapport.cl" style="color:#E46A25;text-decoration:none;">contacto@sapport.cl</a></p>
+  <p>© Sapport Consulting SpA 2026 · Santiago, Chile</p>
+</footer>
+
+</body>
+</html>
