@@ -1,0 +1,5 @@
+# Política de seguridad de Sapport
+Contact: mailto:contacto@sapport.cl
+Expires: 2027-06-30T23:59:59Z
+Preferred-Languages: es, en
+Canonical: https://sapport.cl/.well-known/security.txt
