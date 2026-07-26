@@ -128,16 +128,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://sapport.cl/#org",
       "name": "Sapport Consulting",
+      "alternateName": "Sapport Consulting SpA",
       "url": "https://sapport.cl/",
       "logo": "https://sapport.cl/apple-touch-icon.png",
+      "image": "https://sapport.cl/og-image.jpg",
+      "email": "contacto@sapport.cl",
       "description": "Chilean firm specialized in SAP projects rooted in Human Resources and in SAP Workforce Services for large enterprises. Over 16 years of experience and more than 100 projects delivered.",
       "foundingDate": "2010",
       "areaServed": "CL",
+      "knowsAbout": ["SAP HCM", "SAP SuccessFactors", "Employee Central", "SAP S/4HANA", "Payroll Chile", "SAP Workforce Services", "SAP BTP"],
+      "founder": [
+        { "@id": "https://sapport.cl/#abraham-galarce" },
+        { "@id": "https://sapport.cl/#ruben-padilla" }
+      ],
       "address": { "@type": "PostalAddress", "streetAddress": "San Sebastián 2957, Las Condes", "addressLocality": "Santiago", "addressRegion": "Región Metropolitana", "addressCountry": "CL" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog", "name": "SAP services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SAP HCM & SuccessFactors" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Employee Central & Payroll" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SAP S/4HANA" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SAP Workforce Services" } }
+        ]
+      },
       "sameAs": [ "https://www.linkedin.com/company/sapport-consulting-spa" ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://sapport.cl/#abraham-galarce",
+      "name": "Abraham Galarce",
+      "jobTitle": "Co-founder",
+      "worksFor": { "@id": "https://sapport.cl/#org" },
+      "knowsAbout": ["SAP HCM", "SAP SuccessFactors", "Payroll Chile", "Employee Central"],
+      "sameAs": ["https://www.linkedin.com/in/agalarce/"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://sapport.cl/#ruben-padilla",
+      "name": "Rubén Padilla",
+      "jobTitle": "Co-founder",
+      "worksFor": { "@id": "https://sapport.cl/#org" },
+      "knowsAbout": ["SAP HCM", "SAP SuccessFactors", "Payroll Chile", "SAP Workforce Services"]
     },
     {
       "@type": "WebSite",
@@ -355,7 +389,7 @@
       <div class="divider"></div>
       <h2 class="section-title">About Sapport</h2>
       <p class="section-lead" style="margin-bottom:1rem;">
-        Sapport Consulting is a Chilean firm founded by SAP consultants in 2010. With over 16 years of experience working with the country's leading organizations, we are a reference in SAP projects focused on Human Resources.
+        Sapport Consulting is a Chilean firm founded in 2010 by <strong>Abraham Galarce</strong> and <strong>Rubén Padilla</strong>, co-founders. With over 16 years of experience working with the country's leading organizations, we are a reference in SAP projects focused on Human Resources.
       </p>
       <p class="section-lead">
         We combine strategic vision, proven methodology and specialized talent to deliver projects that truly create value. Today we're evolving toward a model that unites consulting, managed staffing and artificial intelligence applied to People.
