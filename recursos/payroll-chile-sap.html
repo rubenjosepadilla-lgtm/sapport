@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Payroll Chile en SAP: cómo se resuelve la nómina local (2026) | Sapport</title>
+<meta name="description" content="Cómo se resuelve la nómina chilena sobre SAP: SAP HCM Payroll y Employee Central Payroll, la localización (Previred, SII, AFP), y opciones de integración para la gran empresa."/>
+<meta name="keywords" content="payroll chile sap, nómina sap chile, employee central payroll chile, localización nómina sap"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://sapport.cl/recursos/payroll-chile-sap"/>
+<link rel="alternate" hreflang="es-CL" href="https://sapport.cl/recursos/payroll-chile-sap"/>
+<link rel="alternate" hreflang="es" href="https://sapport.cl/recursos/payroll-chile-sap"/>
+<link rel="alternate" hreflang="x-default" href="https://sapport.cl/recursos/payroll-chile-sap"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<meta property="og:type" content="article"/><meta property="og:url" content="https://sapport.cl/recursos/payroll-chile-sap"/>
+<meta property="og:title" content="Payroll Chile en SAP: cómo se resuelve la nómina local (2026)"/>
+<meta property="og:description" content="SAP HCM Payroll y Employee Central Payroll con la localización chilena (Previred, SII, AFP)."/>
+<meta property="og:image" content="https://sapport.cl/og-image.jpg"/><meta property="og:locale" content="es_CL"/><meta property="og:site_name" content="Sapport"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9V1PRY4FX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-L9V1PRY4FX');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"Payroll Chile en SAP: cómo se resuelve la nómina local","author":{"@type":"Organization","name":"Sapport Consulting"},"publisher":{"@type":"Organization","name":"Sapport Consulting","logo":{"@type":"ImageObject","url":"https://sapport.cl/apple-touch-icon.png"}},"datePublished":"2026-07-10","dateModified":"2026-07-10","mainEntityOfPage":"https://sapport.cl/recursos/payroll-chile-sap","inLanguage":"es-CL"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Sapport","item":"https://sapport.cl/"},{"@type":"ListItem","position":2,"name":"Recursos","item":"https://sapport.cl/recursos"},{"@type":"ListItem","position":3,"name":"Payroll Chile en SAP","item":"https://sapport.cl/recursos/payroll-chile-sap"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿SAP resuelve la nómina chilena de forma nativa?","acceptedAnswer":{"@type":"Answer","text":"SAP ofrece el motor de nómina (SAP HCM Payroll y Employee Central Payroll), pero la normativa chilena requiere una localización: reglas de AFP, salud, seguro de cesantía, impuesto único, gratificaciones y la generación de Previred y declaraciones al SII. Esa capa local es lo que hay que implementar y mantener."}},
+{"@type":"Question","name":"¿Qué es Employee Central Payroll?","acceptedAnswer":{"@type":"Answer","text":"Es el motor de nómina de SAP integrado con SuccessFactors Employee Central. Ejecuta la nómina con los datos del core de personas en la nube, aplicando la localización del país."}},
+{"@type":"Question","name":"¿Se puede integrar SAP con un motor de nómina chileno externo?","acceptedAnswer":{"@type":"Answer","text":"Sí. Una opción frecuente es mantener el ERP/SuccessFactors como sistema de personas y conectar un motor de nómina chileno especializado mediante integraciones, cuando se busca cumplimiento local sin cargar el mantenimiento normativo dentro del ERP."}}
+]}]}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#0F2D4A;--dark:#0B1726;--orange:#E46A25;--slate:#5A6B7B;--line:#D9E0E7;--light:#F5F7F9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Open Sans',sans-serif;color:#0F2D4A;background:#fff;line-height:1.75}
+a{color:var(--orange)}
+nav{background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:16px 6%}
+nav .b{font-family:'Poppins';font-weight:800;color:#fff;font-size:20px}nav a.back{color:#cbd5e1;font-size:14px;text-decoration:none}
+.hero{background:var(--navy);color:#fff;padding:46px 6% 38px}.hero .wrap{max-width:760px;margin:0 auto}
+.hero .bc{font-size:12.5px;color:rgba(255,255,255,.55);margin-bottom:8px}.hero .bc a{color:rgba(255,255,255,.8)}
+.hero h1{font-family:'Poppins';font-weight:800;font-size:clamp(26px,4vw,38px);margin:4px 0 10px;line-height:1.18}
+.hero .meta{color:rgba(255,255,255,.55);font-size:14px}
+article{max-width:760px;margin:0 auto;padding:12px 20px 60px}
+.answer{background:#FDF0E8;border-left:5px solid var(--orange);padding:18px 20px;border-radius:10px;margin:28px 0;font-size:16px}
+article h2{font-family:'Poppins';font-weight:700;color:var(--navy);font-size:23px;margin:34px 0 12px}
+article p{margin-bottom:15px;font-size:16.5px}article ul{margin:0 0 16px 22px}article li{margin-bottom:8px}
+.cta{background:linear-gradient(135deg,#0F2D4A,#0B1726);border:1px solid rgba(228,106,37,.4);border-radius:14px;padding:24px;text-align:center;color:#fff;margin:34px 0}
+.cta h3{font-family:'Poppins';font-weight:800;font-size:19px;margin:0 0 6px;color:#fff}
+.cta a{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;padding:11px 24px;border-radius:9px;font-family:'Poppins';margin-top:8px}
+.faq{margin-top:40px}.faq h2{font-size:23px}.faq .q{border-bottom:1px solid var(--line);padding:16px 0}.faq .q h3{font-family:'Poppins';font-size:16px;color:var(--navy);margin:0 0 6px}.faq .q p{margin:0;color:var(--slate);font-size:15px}
+.rel{margin-top:34px;font-size:14.5px}
+footer{background:var(--navy);color:#94a3b8;text-align:center;padding:26px;font-size:13px}footer a{color:var(--orange)}
+</style>
+</head><body>
+<nav><a href="/" style="text-decoration:none"><span class="b">Sapport</span></a><a class="back" href="/recursos">← Recursos</a></nav>
+<div class="hero"><div class="wrap">
+<div class="bc"><a href="/">Sapport</a> › <a href="/recursos">Recursos</a> › Payroll Chile en SAP</div>
+<h1>Payroll Chile en SAP</h1>
+<div class="meta">Actualizado: julio de 2026 · Lectura 4 min</div>
+</div></div>
+<article>
+<div class="answer"><strong>En breve:</strong> SAP entrega el motor de nómina (<strong>SAP HCM Payroll</strong> y <strong>Employee Central Payroll</strong>), pero la nómina chilena exige una <strong>localización</strong>: reglas de AFP, salud, seguro de cesantía, impuesto único y gratificaciones, más la generación de <strong>Previred</strong> y las declaraciones al <strong>SII</strong>. Esa capa local es la que hay que implementar y mantener al día.</div>
+
+<h2>Las opciones sobre SAP</h2>
+<ul>
+<li><strong>SAP HCM Payroll (on-premise):</strong> el motor histórico dentro de SAP HCM, con esquemas y reglas de nómina chilena.</li>
+<li><strong>Employee Central Payroll (ECP):</strong> el motor de nómina integrado con SuccessFactors Employee Central, en la nube.</li>
+<li><strong>Motor de nómina chileno integrado:</strong> mantener SAP/SuccessFactors como sistema de personas y conectar un especialista local para el cumplimiento.</li>
+</ul>
+
+<h2>Qué implica la localización chilena</h2>
+<ul>
+<li>Cotizaciones <strong>AFP, salud (Fonasa/Isapre), seguro de cesantía y SIS</strong>, con sus topes.</li>
+<li><strong>Impuesto único</strong> de 2ª categoría y sus tramos.</li>
+<li><strong>Gratificación legal</strong>, finiquitos, semana corrida y horas extra.</li>
+<li>Generación del archivo <strong>Previred</strong> y de las declaraciones/boletas al <strong>SII</strong>.</li>
+<li>Mantención continua ante cada <strong>cambio legal</strong> (topes, IMM, reformas).</li>
+</ul>
+<p>El costo real no está solo en implementar, sino en <strong>mantener</strong> la normativa vigente mes a mes. Ese es el punto donde más valor aporta un partner especializado.</p>
+
+<div class="cta"><h3>¿Nómina chilena sobre SAP?</h3><p style="opacity:.85">Sapport es especialista en SAP con base en Personas. Conversemos tu caso.</p><a href="mailto:contacto@sapport.cl">Agenda una reunión →</a></div>
+
+<div class="faq"><h2>Preguntas frecuentes</h2>
+<div class="q"><h3>¿SAP resuelve la nómina chilena nativa?</h3><p>SAP da el motor; la normativa chilena requiere una localización que hay que implementar y mantener.</p></div>
+<div class="q"><h3>¿Qué es Employee Central Payroll?</h3><p>El motor de nómina de SAP integrado con SuccessFactors Employee Central, en la nube.</p></div>
+<div class="q"><h3>¿Se puede integrar un motor chileno externo?</h3><p>Sí, manteniendo SAP como sistema de personas y conectando un especialista local de nómina.</p></div>
+</div>
+
+<div class="rel"><strong>Ver también:</strong> <a href="/recursos/successfactors">SAP SuccessFactors</a> · <a href="/recursos/sap-s4hana">SAP S/4HANA</a> · <a href="/sap-workforce-services.html">SAP Workforce Services</a></div>
+</article>
+<footer>© 2026 Sapport Consulting SpA · <a href="/recursos">Recursos</a> · <a href="/privacidad.html">Privacidad</a></footer>
+</body></html>
