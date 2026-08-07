@@ -61,4 +61,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sapport.cl/privacidad.html"/>
     <priority>0.2</priority>
   </url>
+
+  <!-- ═══ Recursos SAP /recursos (solo ES) ═══ -->
+  <url><loc>https://sapport.cl/recursos</loc><priority>0.8</priority></url>
+  <url><loc>https://sapport.cl/recursos/sap-s4hana</loc><priority>0.7</priority></url>
+  <url><loc>https://sapport.cl/recursos/fin-soporte-sap-ecc-2027</loc><priority>0.7</priority></url>
+  <url><loc>https://sapport.cl/recursos/successfactors</loc><priority>0.7</priority></url>
+  <url><loc>https://sapport.cl/recursos/payroll-chile-sap</loc><priority>0.7</priority></url>
+  <url><loc>https://sapport.cl/recursos/staff-augmentation-sap</loc><priority>0.7</priority></url>
 </urlset>
