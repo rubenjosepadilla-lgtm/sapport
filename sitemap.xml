@@ -64,6 +64,7 @@
 
   <!-- ═══ Recursos SAP /recursos (solo ES) ═══ -->
   <url><loc>https://sapport.cl/recursos</loc><priority>0.8</priority></url>
+  <url><loc>https://sapport.cl/recursos/release-2h-2026</loc><priority>0.9</priority></url>
   <url><loc>https://sapport.cl/recursos/sap-s4hana</loc><priority>0.7</priority></url>
   <url><loc>https://sapport.cl/recursos/fin-soporte-sap-ecc-2027</loc><priority>0.7</priority></url>
   <url><loc>https://sapport.cl/recursos/successfactors</loc><priority>0.7</priority></url>
