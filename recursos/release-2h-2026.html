@@ -126,7 +126,7 @@ footer{background:var(--navy);color:#94a3b8;text-align:center;padding:26px;font-
   document.getElementById('cd-prod').textContent = daysLeft(PROD);
 
   // Config HubSpot: reemplazar por el portalId/formId reales del formulario "Release SFSF 2H 2026".
-  var HUBSPOT = { portalId: '51844342', formId: 'PLACEHOLDER_FORM_ID_RELEASE' };
+  var HUBSPOT = { portalId: '51844342', formId: 'd0f1c915-4bf9-4975-a983-809043fdf180' };
   var FREE = ['gmail.com','googlemail.com','hotmail.com','hotmail.es','outlook.com','outlook.es','live.com','live.cl','msn.com','yahoo.com','yahoo.es','yahoo.cl','icloud.com','me.com','mac.com','aol.com','proton.me','protonmail.com','gmx.com','gmx.es','mail.com','yandex.com','zoho.com','duck.com'];
 
   document.getElementById('rel-form').addEventListener('submit', function(e){
@@ -144,11 +144,12 @@ footer{background:var(--navy);color:#94a3b8;text-align:center;padding:26px;font-
       document.getElementById('rel-form').style.display = 'none';
       document.getElementById('rel-ok').style.display = 'block';
     };
-    if (!HUBSPOT.formId || /PLACEHOLDER/i.test(HUBSPOT.portalId + HUBSPOT.formId)) { location.href='mailto:contacto@sapport.cl?subject='+encodeURIComponent('Avisos release SuccessFactors 2H 2026')+'&body='+encodeURIComponent('Correo: '+email+'\nEmpresa: '+company+'\n\nQuiero recibir el checklist y los avisos del release.'); done(); return; }
+    var viaMail = function(){ location.href='mailto:contacto@sapport.cl?subject='+encodeURIComponent('Avisos release SuccessFactors 2H 2026')+'&body='+encodeURIComponent('Correo: '+email+'\nEmpresa: '+company+'\n\nQuiero recibir el checklist y los avisos del release.'); };
+    if (!HUBSPOT.formId || /PLACEHOLDER/i.test(HUBSPOT.portalId + HUBSPOT.formId)) { viaMail(); done(); return; }
     fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT.portalId + '/' + HUBSPOT.formId, {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ fields:[{name:'email',value:email},{name:'company',value:company}], context:{pageUri:location.href,pageName:document.title}, legalConsentOptions:{consent:{consentToProcess:true,text:'Acepto el tratamiento de mis datos según la política de privacidad.'}} })
-    }).then(done).catch(done);
+      body: JSON.stringify({ fields:[{name:'email',value:email},{name:'company',value:company}], context:{pageUri:location.href,pageName:document.title} })
+    }).then(function(r){ if(!r.ok) throw new Error('hs'); done(); }).catch(function(){ viaMail(); done(); });
   });
 })();
 </script>

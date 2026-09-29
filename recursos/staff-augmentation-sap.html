@@ -126,7 +126,7 @@ footer{background:var(--navy);color:#94a3b8;text-align:center;padding:26px;font-
 </div>
 <script>
 (function(){
-  var HUBSPOT = { portalId: '51844342', formId: 'PLACEHOLDER_FORM_ID_STAFFAUG' };
+  var HUBSPOT = { portalId: '51844342', formId: 'd365abb5-ea40-4f08-a877-b3977f218967' };
   var FREE = ['gmail.com','googlemail.com','hotmail.com','hotmail.es','outlook.com','outlook.es','live.com','live.cl','msn.com','yahoo.com','yahoo.es','yahoo.cl','icloud.com','me.com','mac.com','aol.com','proton.me','protonmail.com','gmx.com','gmx.es','mail.com','yandex.com','zoho.com','duck.com'];
   document.getElementById('sa-form').addEventListener('submit', function(e){
     e.preventDefault();
@@ -149,20 +149,18 @@ footer{background:var(--navy);color:#94a3b8;text-align:center;padding:26px;font-
       document.getElementById('sa-form').style.display = 'none';
       document.getElementById('sa-ok').style.display = 'block';
     };
-    if (!HUBSPOT.formId || /PLACEHOLDER/i.test(HUBSPOT.portalId + HUBSPOT.formId)) { location.href='mailto:contacto@sapport.cl?subject='+encodeURIComponent('Solicitud de perfil SAP')+'&body='+encodeURIComponent('Correo: '+email+'\nEmpresa: '+fields.company+'\nPerfil: '+fields.perfil+'\nSeniority: '+fields.seniority+'\nDuración: '+fields.duracion+'\nModalidad: '+fields.modalidad+'\nInicio: '+fields.inicio); done(); return; }
+    var viaMail = function(){ location.href='mailto:contacto@sapport.cl?subject='+encodeURIComponent('Solicitud de perfil SAP')+'&body='+encodeURIComponent('Correo: '+email+'\nEmpresa: '+fields.company+'\nPerfil: '+fields.perfil+'\nSeniority: '+fields.seniority+'\nDuración: '+fields.duracion+'\nModalidad: '+fields.modalidad+'\nInicio: '+fields.inicio); };
+    if (!HUBSPOT.formId || /PLACEHOLDER/i.test(HUBSPOT.portalId + HUBSPOT.formId)) { viaMail(); done(); return; }
     fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT.portalId + '/' + HUBSPOT.formId, {
       method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({
         fields:[
           {name:'email',value:email},{name:'company',value:fields.company},
-          {name:'perfil_sap_solicitado',value:fields.perfil},{name:'seniority',value:fields.seniority},
-          {name:'duracion_estimada',value:fields.duracion},{name:'modalidad',value:fields.modalidad},
-          {name:'fecha_inicio_deseada',value:fields.inicio}
+          {name:'message',value:'Solicitud de perfil SAP\nPerfil: '+fields.perfil+'\nSeniority: '+fields.seniority+'\nDuración: '+fields.duracion+'\nModalidad: '+fields.modalidad+'\nInicio deseado: '+fields.inicio}
         ],
-        context:{pageUri:location.href,pageName:document.title},
-        legalConsentOptions:{consent:{consentToProcess:true,text:'Acepto el tratamiento de mis datos según la política de privacidad.'}}
+        context:{pageUri:location.href,pageName:document.title}
       })
-    }).then(done).catch(done);
+    }).then(function(r){ if(!r.ok) throw new Error('hs'); done(); }).catch(function(){ viaMail(); done(); });
   });
 })();
 </script>
