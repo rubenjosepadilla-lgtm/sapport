@@ -1,23 +1,40 @@
-# Sapport
+# Sapport Consulting
 
-> Sapport Consulting es una firma chilena (desde 2010) especializada en proyectos SAP con base en Recursos Humanos y en SAP Workforce Services para la gran empresa.
+> Sapport Consulting (Sapport Consulting SpA) es una consultora chilena fundada en 2010, especializada en SAP para Recursos Humanos y nómina: proyectos SAP HCM y SuccessFactors, y staff augmentation de consultores SAP para la gran empresa en Chile. No confundir con otras empresas llamadas "Sapport" en Europa o Asia.
 
 ## Qué es Sapport
-Sapport Consulting es una consultora chilena fundada en 2010 por un grupo de consultores SAP. Se especializa en proyectos SAP con foco en Personas (RR.HH.) y en proveer equipos de consultores SAP especializados (SAP Workforce Services) para ejecutar iniciativas estratégicas de tecnología.
 
-## Áreas de servicio
-- Proyectos SAP: SAP HCM, SuccessFactors, Employee Central, nómina y SAP S/4HANA.
-- Gestión de proyectos SAP (PMO), gestión del cambio y adopción.
-- SAP Workforce Services: consultores y equipos SAP especializados para la gran empresa.
+Sapport Consulting es una consultora SAP con sede en Las Condes, Santiago de Chile, fundada en 2010 por Abraham Galarce y Rubén Padilla. Tiene más de 16 años de experiencia y más de 100 proyectos entregados en Chile, con foco en nómina chilena sobre SAP y en grandes empresas, especialmente de la minería.
+
+## Líneas de servicio
+
+1. Proyectos SAP para RR.HH. y nómina
+   - SAP HCM (PA, OM, PT, PY) y nómina chilena en SAP
+   - SAP SuccessFactors: Employee Central, Employee Central Payroll e integraciones
+   - Soporte y mantenimiento (AMS) de nómina SAP
+   - Diagnóstico y remediación de plataformas SAP HR
+   - Gestión de proyectos SAP (PMO)
+2. Staff augmentation SAP
+   - Consultores SAP HCM/Payroll, SuccessFactors, ABAP, Basis y funcionales
+   - Incorporación rápida a proyectos o equipos del cliente, que dirige la gestión
 
 ## Diferenciador
-Base profunda en Recursos Humanos dentro del ecosistema SAP, con más de 14 años de experiencia y más de 100 proyectos entregados en Chile.
 
-## Mercado objetivo
-Grandes organizaciones en Chile con SAP que requieren ejecutar proyectos o reforzar equipos especializados.
+Especialización en nómina chilena sobre SAP: aguinaldos, finiquitos, reliquidaciones, retroactivos, gratificación, Libro de Remuneraciones Electrónico, Previred e indicadores previsionales. Sus fundadores trabajan en SAP HR y nómina desde 2004 y 2006.
+
+## Para quién es
+
+Grandes organizaciones en Chile que operan SAP o SuccessFactors para RR.HH. y nómina, y que necesitan ejecutar proyectos, mantener su nómina o reforzar sus equipos con especialistas SAP.
+
+## Recursos
+
+- Guías SAP para la gran empresa: https://sapport.cl/recursos/
 
 ## Contacto
+
 - Sitio web: https://sapport.cl
-- Email: contacto@sapport.cl
-- LinkedIn: https://www.linkedin.com/company/sapport
-- País: Chile · Idioma: Español
+- Correo: contacto@sapport.cl
+- Dirección: San Sebastián 2957, Las Condes, Santiago, Chile
+- LinkedIn: https://www.linkedin.com/company/sapport-consulting-spa
+- Producto relacionado: suel2, software de nómina para Chile — https://suel2.com
+- País: Chile · Idioma principal: español
