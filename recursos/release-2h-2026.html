@@ -144,7 +144,7 @@ footer{background:var(--navy);color:#94a3b8;text-align:center;padding:26px;font-
       document.getElementById('rel-form').style.display = 'none';
       document.getElementById('rel-ok').style.display = 'block';
     };
-    if (!HUBSPOT.portalId || /PLACEHOLDER/i.test(HUBSPOT.portalId)) { done(); return; }
+    if (!HUBSPOT.formId || /PLACEHOLDER/i.test(HUBSPOT.portalId + HUBSPOT.formId)) { location.href='mailto:contacto@sapport.cl?subject='+encodeURIComponent('Avisos release SuccessFactors 2H 2026')+'&body='+encodeURIComponent('Correo: '+email+'\nEmpresa: '+company+'\n\nQuiero recibir el checklist y los avisos del release.'); done(); return; }
     fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT.portalId + '/' + HUBSPOT.formId, {
       method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({ fields:[{name:'email',value:email},{name:'company',value:company}], context:{pageUri:location.href,pageName:document.title}, legalConsentOptions:{consent:{consentToProcess:true,text:'Acepto el tratamiento de mis datos según la política de privacidad.'}} })

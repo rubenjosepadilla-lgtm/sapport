@@ -149,7 +149,7 @@ footer{background:var(--navy);color:#94a3b8;text-align:center;padding:26px;font-
       document.getElementById('sa-form').style.display = 'none';
       document.getElementById('sa-ok').style.display = 'block';
     };
-    if (!HUBSPOT.portalId || /PLACEHOLDER/i.test(HUBSPOT.portalId)) { done(); return; }
+    if (!HUBSPOT.formId || /PLACEHOLDER/i.test(HUBSPOT.portalId + HUBSPOT.formId)) { location.href='mailto:contacto@sapport.cl?subject='+encodeURIComponent('Solicitud de perfil SAP')+'&body='+encodeURIComponent('Correo: '+email+'\nEmpresa: '+fields.company+'\nPerfil: '+fields.perfil+'\nSeniority: '+fields.seniority+'\nDuración: '+fields.duracion+'\nModalidad: '+fields.modalidad+'\nInicio: '+fields.inicio); done(); return; }
     fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT.portalId + '/' + HUBSPOT.formId, {
       method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({
