@@ -155,7 +155,7 @@ footer{background:var(--navy);color:#94a3b8;text-align:center;padding:26px;font-
       method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({
         fields:[
-          {name:'email',value:email},{name:'company',value:fields.company},
+          {name:'email',value:email},{name:'company',value:fields.company},{name:'marca',value:'Sapport'},
           {name:'message',value:'Solicitud de perfil SAP\nPerfil: '+fields.perfil+'\nSeniority: '+fields.seniority+'\nDuración: '+fields.duracion+'\nModalidad: '+fields.modalidad+'\nInicio deseado: '+fields.inicio}
         ],
         context:{pageUri:location.href,pageName:document.title}
