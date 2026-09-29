@@ -174,4 +174,15 @@ footer{background:var(--navy);color:#94a3b8;text-align:center;padding:26px;font-
 <div class="rel"><strong>Ver también:</strong> <a href="/sap-workforce-services.html">SAP Workforce Services</a> · <a href="/recursos/successfactors">SAP SuccessFactors</a> · <a href="/recursos/sap-s4hana">SAP S/4HANA</a></div>
 </article>
 <footer>© 2026 Sapport Consulting SpA · <a href="/recursos">Recursos</a> · <a href="/privacidad.html">Privacidad</a></footer>
+<script>(function(){
+  // Código de seguimiento de HubSpot: se carga solo con consentimiento (cookies aceptadas o casilla del formulario)
+  function loadHS() {
+    if (document.getElementById('hs-script-loader')) return;
+    var s = document.createElement('script'); s.id = 'hs-script-loader'; s.async = true; s.defer = true;
+    s.src = 'https://js.hs-scripts.com/51844342.js'; document.body.appendChild(s);
+  }
+  try { if (localStorage.getItem('cookie-consent-sapport') === 'granted') document.addEventListener('DOMContentLoaded', loadHS); } catch (e) {}
+  document.addEventListener('click', function (e) { if (e.target && e.target.id === 'cookie-accept') loadHS(); });
+  document.addEventListener('change', function (e) { if (e.target && (e.target.type === 'checkbox' || e.target.tagName === 'INPUT') && e.target.checked) loadHS(); });
+})();</script>
 </body></html>
