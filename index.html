@@ -554,6 +554,20 @@
       .nosotros-inner { flex-direction: column; }
       .nosotros-cards { flex: none; width: 100%; }
     }
+  
+    /* ━━━ CLIENTES Y PARTNERS (27-oct-2026) ━━━ */
+    .clientes { background: var(--light-bg); }
+    .clientes-inner { max-width: 1000px; margin: 0 auto; }
+    .logo-group { margin-top: 2.2rem; }
+    .logo-group-k { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #94A3B8; margin-bottom: 0.9rem; }
+    .logo-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 12px; }
+    .logo-wall span { display: flex; align-items: center; justify-content: center; min-height: 72px; padding: 0 14px; text-align: center; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-head); font-weight: 700; font-size: 1.02rem; letter-spacing: -0.01em; color: #475569; }
+    .founders { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.4rem; }
+    .founder { display: inline-flex; flex-direction: column; padding: 0.7rem 1rem; border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: var(--radius); text-decoration: none; background: var(--white); }
+    .founder strong { font-family: var(--font-head); font-size: 0.92rem; color: var(--navy); }
+    .founder span { font-size: 0.78rem; color: var(--text-muted); }
+    .founder:hover strong { color: var(--orange); }
+    .founders-note { font-size: 0.86rem; color: var(--text-muted); margin-top: 0.9rem; max-width: 620px; line-height: 1.6; }
   </style>
 <link rel="canonical" href="https://sapport.cl/"/>
 <link rel="alternate" hreflang="es-CL" href="https://sapport.cl/"/>
@@ -901,6 +915,18 @@
   </div>
 </section>
 
+<!-- ════ CLIENTES Y PARTNERS ════ -->
+<section id="clientes" class="clientes" aria-label="Clientes y partners">
+  <div class="clientes-inner">
+    <span class="section-label">Con quién trabajamos</span>
+    <div class="divider"></div>
+    <h2 class="section-title">Clientes y partners</h2>
+    <p class="section-lead">Mineras y grandes empresas que confían su SAP HR a Sapport, y los integradores con los que trabajamos en sus proyectos.</p>
+    <div class="logo-group"><div class="logo-group-k">Clientes</div><div class="logo-wall"><span>BHP</span><span>Anglo American</span><span>Teck</span><span>Collahuasi</span><span>Capstone Copper</span><span>Lundin Mining</span><span>FEMSA</span></div></div>
+    <div class="logo-group"><div class="logo-group-k">Partners</div><div class="logo-wall"><span>Accenture</span><span>EY</span><span>Seidor</span><span>NBC</span><span>Axity</span><span>Akhand</span></div></div>
+  </div>
+</section>
+
 <!-- ════ NOSOTROS ════ -->
 <section id="nosotros" class="nosotros">
   <div class="nosotros-inner">
@@ -914,6 +940,11 @@
       <p class="section-lead">
         Combinamos visión estratégica, metodología probada y talento especializado para entregar proyectos que realmente crean valor. Hoy evolucionamos hacia un modelo que une consultoría, staffing gestionado e inteligencia artificial aplicada a Personas.
       </p>
+      <div class="founders" aria-label="Detrás de Sapport">
+        <a class="founder" href="https://www.linkedin.com/in/rubenpadilla/" target="_blank" rel="noopener"><strong>Rubén Padilla</strong><span>Fundador</span></a>
+        <a class="founder" href="https://www.linkedin.com/in/agalarce/" target="_blank" rel="noopener"><strong>Abraham Galarce</strong><span>Fundador y Arquitecto SAP</span></a>
+      </div>
+      <p class="founders-note">En 2010, junto a SAP, diseñaron el proceso que hoy es la reliquidación estándar de la nómina chilena en SAP.</p>
     </div>
     <div class="nosotros-cards">
       <div class="nos-card">
