@@ -17,6 +17,9 @@ Sapport Consulting es una consultora SAP con sede en Las Condes, Santiago de Chi
 2. Staff augmentation SAP
    - Consultores SAP HCM/Payroll, SuccessFactors, ABAP, Basis y funcionales
    - Incorporación rápida a proyectos o equipos del cliente, que dirige la gestión
+3. IA aplicada a Core HR y nómina
+   - Modelos y agentes sobre ficha del empleado, nómina y costo laboral
+   - Proyección de costo de mano de obra por labor con variables externas (clima, tipo de cambio, contexto económico)
 
 ## Diferenciador
 
@@ -38,3 +41,4 @@ Grandes organizaciones en Chile que operan SAP o SuccessFactors para RR.HH. y n�
 - LinkedIn: https://www.linkedin.com/company/sapport-consulting-spa
 - Producto relacionado: suel2, software de nómina para Chile — https://suel2.com
 - País: Chile · Idioma principal: español
+- Última actualización: 2026-11-03

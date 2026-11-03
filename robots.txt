@@ -1,7 +1,8 @@
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
-# Crawlers de IA (GEO/AEO) — permitidos explícitamente
+# Buscadores y asistentes de IA (GEO/AEO): permitidos explícitamente
 User-agent: GPTBot
 Allow: /
 User-agent: OAI-SearchBot
@@ -10,9 +11,19 @@ User-agent: ChatGPT-User
 Allow: /
 User-agent: ClaudeBot
 Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
 User-agent: PerplexityBot
 Allow: /
+User-agent: Perplexity-User
+Allow: /
 User-agent: Google-Extended
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
 Allow: /
 User-agent: Bingbot
 Allow: /
